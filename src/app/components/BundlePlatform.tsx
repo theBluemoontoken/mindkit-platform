@@ -3,11 +3,10 @@
 import { Fira_Sans } from 'next/font/google';
 import React, { useState } from 'react';
 import { Package, BookOpen, Heart, Brain, Briefcase, TrendingUp } from 'lucide-react';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card';
+import { Card, CardDescription, CardHeader, CardTitle } from './ui/card';
 import InteractiveBackground from './InteractiveBackground';
-import { useParallax } from '../utils/useParallax';
 import { Zap, Shield, Clock, Shapes, Award } from 'lucide-react';
-import { Timer, Gift, CheckCircle } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 
 
 const fira = Fira_Sans({ 
@@ -178,13 +177,6 @@ const BundlePlatform = () => {
       stars: 5
     }
   ];
-  
-  const statistics = {
-    users: "10,000+",
-    avgGrowth: "250%",
-    satisfaction: "98%",
-    savings: "4.5 сая ₮"
-  };
 
   const benefits = [
     {
@@ -639,7 +631,7 @@ const BundlePlatform = () => {
             ))}
           </div>
 
-          <p className="text-gray-600 text-sm mb-3">"{story.content}"</p>
+          <p className="text-gray-600 text-sm mb-3">{story.content}</p>
           <div className="text-[#5D26C1] font-medium text-sm">{story.metric}</div>
         </div>
       ))}
